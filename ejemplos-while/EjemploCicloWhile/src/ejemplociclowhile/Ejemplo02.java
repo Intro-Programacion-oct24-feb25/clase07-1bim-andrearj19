@@ -22,9 +22,9 @@ public class Ejemplo02 {
         int contador = 1;
         System.out.println("Ingrese el Límite");
         limite = entrada.nextInt(); 
-        while (contador <= limite){
-            
-            if (contador%2==0) {
+        while (contador <= limite){     // en el if contador %2 es mod 2 y con doble == me imprime los 
+                                        //numeros pares y con el ! los impares
+            if (contador%2==0){
                 System.out.printf("Contador %d\n", 
                     contador);
             }
