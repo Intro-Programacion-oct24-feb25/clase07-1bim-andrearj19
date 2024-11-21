@@ -37,6 +37,10 @@ public class Ejemplo061 {
 
             if (calificacion > 20) {
                 calificacion = 20;
+            }else{
+                if(calificacion>=0 && calificacion <=5){
+                    calificacion= 6;
+                }
             }
             suma_total = suma_total + calificacion;
 
