@@ -30,7 +30,7 @@ public class Ejemplo06 {
         System.out.println("Ingrese las notas de los "
                 + "estudiantes de su materia");
         // true 
-        // while (bandera) {
+        // while (bandera) {//estas dos lineas 33 y 34 son exatamente lo mismo
         while(bandera==true){
             System.out.println("Ingrese calificación");
             calificacion = entrada.nextDouble();
