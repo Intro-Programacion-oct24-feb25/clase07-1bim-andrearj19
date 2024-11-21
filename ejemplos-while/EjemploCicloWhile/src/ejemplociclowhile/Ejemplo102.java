@@ -50,16 +50,20 @@ public class Ejemplo102 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int limite_tabla = 12;
+        int limite_tabla;
         int contador = 1;
         int operacion;
         int tabla;
+        int suma;
+        int resta;
         
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
+        System.out.println("Ingrese el limite de la tabla a generar");
+        limite_tabla = entrada.nextInt();
         
         String cadenaMultiplicar = ""; // cadena acumulador
-        String cadena = "";
+     
         String cadenaSuma = "";
         String cadenaResta = "";
         
@@ -69,28 +73,26 @@ public class Ejemplo102 {
             operacion = tabla * contador;
            
             cadenaSuma = String.format("%s%d+%d=%d\n", 
-                    cadena, 
+                    cadenaSuma, 
                     tabla, 
                     contador,
                     operacion);
-            contador = tabla - contador;
+            resta = tabla - contador;
             
             cadenaResta = String.format("%s%d-%d=%d\n", 
-                    cadena, 
+                    cadenaResta, 
                     tabla, 
                     contador,
                     operacion);
-            contador = contador + 1;
+            suma = contador + 1;
             cadenaMultiplicar = String.format("%s%d*%d=%d\n", 
-                    cadena, 
+                    cadenaMultiplicar, 
                     tabla, 
                     contador,
                     operacion);
             contador = contador + 1;
         }
-           cadena = String.format("Tabla de sumar\n%s\n"
-                   + "Tabla de restar\n%s\n "+ "Tabla de multiplicar"
-                   + "\n%s\n", cadenaSuma , cadenaResta , cadenaMultiplicar);     
+                
         System.out.printf("Tabla de sumar\n%s\n"
                    + "Tabla de restar\n%s\nTabla de multiplicar"
                    + "\n%s\n", cadenaSuma , cadenaResta, cadenaMultiplicar);
